@@ -5,4 +5,6 @@ const webpackConfig = require('./webpack.config.js')
 
 const app = express();
 
+app.use(webpackMiddleware(webpack(webpackConfig)));
+
 app.listen(3050, ()=>console.log('Listening'));
